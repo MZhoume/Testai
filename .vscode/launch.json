@@ -50,8 +50,8 @@
       "name": "TypeScript: Jest",
       "type": "node",
       "request": "launch",
-      "runtimeExecutable": "${workspaceFolder}/typescript/node_modules/.bin/jest",
-      "args": ["--runInBand"],
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["${workspaceFolder}/typescript/node_modules/jest/bin/jest.js", "--runInBand"],
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}/typescript"
     }

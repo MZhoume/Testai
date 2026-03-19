@@ -6,4 +6,6 @@ function main(): void {
   console.log(greet("World"));
 }
 
-main();
+if (require.main === module) {
+  main();
+}

@@ -4,7 +4,6 @@
   "editor.tabSize": 4,
 
   // Python settings
-  "python.defaultInterpreterPath": "${workspaceFolder}/python/.venv/bin/python",
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.tabSize": 4
