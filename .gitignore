@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+.venv/
+.env
+
+# TypeScript / Node
+node_modules/
+dist/
+*.js.map
+*.d.ts
+coverage/
+
+# VSCode
+.vscode/settings.json.user
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db

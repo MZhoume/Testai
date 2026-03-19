@@ -1,0 +1,18 @@
+{
+  "folders": [
+    { "name": "Root", "path": "." },
+    { "name": "Python", "path": "python" },
+    { "name": "TypeScript", "path": "typescript" }
+  ],
+  "settings": {},
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.pylance",
+      "ms-python.debugpy",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "ms-vscode.vscode-typescript-next"
+    ]
+  }
+}
