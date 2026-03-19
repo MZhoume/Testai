@@ -1,0 +1,59 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/python"
+    },
+    {
+      "name": "Python: Main",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/python/src/main.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/python"
+    },
+    {
+      "name": "TypeScript: Current File",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--import", "tsx"],
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/typescript"
+    },
+    {
+      "name": "TypeScript: Main",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--import", "tsx"],
+      "program": "${workspaceFolder}/typescript/src/index.ts",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/typescript"
+    },
+    {
+      "name": "Python: Pytest",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["${workspaceFolder}/python/tests"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/python"
+    },
+    {
+      "name": "TypeScript: Jest",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["${workspaceFolder}/typescript/node_modules/jest/bin/jest.js", "--runInBand"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/typescript"
+    }
+  ]
+}
