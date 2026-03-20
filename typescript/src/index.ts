@@ -12,10 +12,21 @@ export function parseNameArg(argv: readonly string[]): string {
   return argv[2] ?? "World";
 }
 
-function main(argv: readonly string[] = process.argv): void {
-  console.log(greet(parseNameArg(argv)));
+export function runCli(
+  argv: readonly string[] = process.argv,
+  stdout: Pick<Console, "log"> = console,
+  stderr: Pick<Console, "error"> = console
+): number {
+  try {
+    stdout.log(greet(parseNameArg(argv)));
+    return 0;
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Unknown error";
+    stderr.error(`Error: ${message}`);
+    return 1;
+  }
 }
 
 if (require.main === module) {
-  main();
+  process.exitCode = runCli();
 }

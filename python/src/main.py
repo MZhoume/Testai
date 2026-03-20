@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import argparse
+import sys
+from collections.abc import Sequence
 
 
 def greet(name: str) -> str:
@@ -19,11 +21,23 @@ def _build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def main() -> None:
+def parse_name_arg(argv: Sequence[str] | None = None) -> str:
+    """Parse and return the name argument from CLI args."""
     parser = _build_parser()
-    args = parser.parse_args()
-    print(greet(args.name))
+    args = parser.parse_args(argv)
+    return args.name
+
+
+def main(argv: Sequence[str] | None = None) -> int:
+    """Run the CLI and return a process exit code."""
+    try:
+        print(greet(parse_name_arg(argv)))
+    except ValueError as error:
+        print(f"Error: {error}", file=sys.stderr)
+        return 1
+
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
